@@ -1,21 +1,39 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import metadata from './metadata.json';
 import FloorView from './FloorView';
 import RoomView from './RoomView';
 import './App.css';
 
 const App = () => {
-  const [floors, setFloors] = useState(metadata.floors); // State for floors
+  
+
+
+  const [floors, setFloors] = useState([]); // State for floors
+  const [appliances, setAppliances] = useState([]); // State for floors
   const [currentFloor, setCurrentFloor] = useState(null);
   const [currentRoom, setCurrentRoom] = useState(null);
 
   const handleFloorClick = (floor) => {
     setCurrentFloor(floor);
+    console.log(floor._id)
     setCurrentRoom(null);
   };
 
   const handleRoomClick = (room) => {
     setCurrentRoom(room);
+    async function fetchData() {
+      const url = `https://energy-manager-service.onrender.com/api/appliances/room/${room._id}`
+      const response = await fetch(url, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        }
+      });
+      const data = await response.json()
+      console.log("hello", data)
+      setAppliances(data)
+    }
+    fetchData();
   };
 
   const handleBack = () => {
@@ -98,6 +116,22 @@ const App = () => {
     }
   };
 
+  useEffect(() => {
+    async function fetchData() {
+      const url = "https://energy-manager-service.onrender.com/api/users/sudharshanthunk@gmail.com"
+      const response = await fetch(url, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        }
+      });
+      const data = await response.json()
+      console.log(data)
+      setFloors(data.floors)
+    }
+    fetchData();
+  },[])
+
   return (
     <div className="app">
       {!currentFloor && (
@@ -113,10 +147,10 @@ const App = () => {
           </button>
           <h2>{currentRoom.name}</h2>
           <div className="appliances">
-            {currentRoom.appliances.map((appliance) => (
-              <div key={appliance.id} className="appliance-card">
-                <h3>{appliance.name}</h3>
-                <p>Type: {appliance.type}</p>
+            {appliances.map((appliance) => (
+              <div key={appliance._id} className="appliance-card">
+                <h3>{appliance.applianceName}</h3>
+                <p>Type: {appliance.category}</p>
               </div>
             ))}
           </div>

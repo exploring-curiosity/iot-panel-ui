@@ -11,7 +11,7 @@ const FloorView = ({ floors, onFloorClick }) => {
         const y = Math.sin((angle * Math.PI) / 180) * radius; // Y position
         return (
           <div
-            key={floor.id}
+            key={floor._id}
             className="floor"
             style={{
               position: 'absolute',
@@ -21,7 +21,7 @@ const FloorView = ({ floors, onFloorClick }) => {
             }}
             onClick={() => onFloorClick(floor)}
           >
-            {floor.name}
+            {floor.floorName}
           </div>
         );
       })}
