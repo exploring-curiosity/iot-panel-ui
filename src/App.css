@@ -1,0 +1,213 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #1e1e2f, #2a2a40);
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Particle effect for background */
+.app::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%; /* Double height to allow seamless scrolling */
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 2px, transparent 2px);
+  background-size: 20px 20px; /* Spacing between dots */
+  z-index: 0;
+  animation: moveParticles 10s linear infinite;
+}
+
+@keyframes moveParticles {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%); /* Move up by half the height to create a seamless loop */
+  }
+}
+
+/* Center and corner dots */
+.center-dot, .corner-dot {
+  width: 20px;
+  height: 20px;
+  background-color: #ff5722;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.floor, .room {
+  width: 100px;
+  height: 100px;
+  background-color: #333;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: float 3s ease-in-out infinite;
+}
+
+.floor:hover, .room:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255, 87, 34, 0.7);
+}
+
+@keyframes float {
+  0% {
+    transform: translate(-50%, -50%) translateY(0);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(-10px);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(0);
+  }
+}
+
+.room-details {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px; /* Space for the back button */
+  z-index: 1;
+}
+
+.room-details h2 {
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease;
+}
+
+.appliances {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.appliance-card {
+  background-color: #333;
+  padding: 15px;
+  border-radius: 10px;
+  width: 180px;
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: slideIn 0.5s ease;
+}
+
+.appliance-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 87, 34, 0.5);
+}
+
+.appliance-card h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.appliance-card p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #bbb;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.back-button {
+  background-color: #ff5722;
+  border: none;
+  padding: 10px 20px;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 3;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #e64a19;
+  transform: scale(1.1);
+}
+
+/* Floating Action Button (FAB) */
+.fab {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #ff5722;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  z-index: 1000; /* Ensure it's above other elements */
+}
+
+.fab:hover {
+  background-color: #e64a19;
+  transform: scale(1.1);
+}

@@ -1,0 +1,154 @@
+{
+    "floors": [
+      {
+        "id": "basement",
+        "name": "Basement",
+        "rooms": [
+          {
+            "id": "room1",
+            "name": "Storage Room",
+            "appliances": [
+              { "id": "appliance1", "name": "Dehumidifier", "type": "Other" },
+              { "id": "appliance2", "name": "Freezer", "type": "Refrigerator" },
+              { "id": "appliance3", "name": "Workbench Light", "type": "Light" },
+              { "id": "appliance4", "name": "Tool Charger", "type": "Sockets" },
+              { "id": "appliance5", "name": "Air Conditioner", "type": "AC" }
+            ]
+          },
+          {
+            "id": "room2",
+            "name": "Laundry Room",
+            "appliances": [
+              { "id": "appliance6", "name": "Washing Machine", "type": "Washing Machine" },
+              { "id": "appliance7", "name": "Dryer", "type": "Dryer" },
+              { "id": "appliance8", "name": "Utility Sink Light", "type": "Light" },
+              { "id": "appliance9", "name": "Iron", "type": "Other" },
+              { "id": "appliance10", "name": "Vent Fan", "type": "Fan" }
+            ]
+          },
+          {
+            "id": "room3",
+            "name": "Home Theater",
+            "appliances": [
+              { "id": "appliance11", "name": "Projector", "type": "TV" },
+              { "id": "appliance12", "name": "Surround Sound", "type": "Other" },
+              { "id": "appliance13", "name": "AC Unit", "type": "AC" },
+              { "id": "appliance14", "name": "LED Lights", "type": "Light" },
+              { "id": "appliance15", "name": "Power Strip", "type": "Sockets" }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "firstFloor",
+        "name": "First Floor",
+        "rooms": [
+          {
+            "id": "room4",
+            "name": "Living Room",
+            "appliances": [
+              { "id": "appliance16", "name": "Smart TV", "type": "TV" },
+              { "id": "appliance17", "name": "Ceiling Fan", "type": "Fan" },
+              { "id": "appliance18", "name": "Lamp", "type": "Light" },
+              { "id": "appliance19", "name": "Air Conditioner", "type": "AC" },
+              { "id": "appliance20", "name": "Charging Station", "type": "Sockets" }
+            ]
+          },
+          {
+            "id": "room5",
+            "name": "Kitchen",
+            "appliances": [
+              { "id": "appliance21", "name": "Refrigerator", "type": "Refrigerator" },
+              { "id": "appliance22", "name": "Oven", "type": "Oven" },
+              { "id": "appliance23", "name": "Microwave", "type": "Other" },
+              { "id": "appliance24", "name": "Dishwasher", "type": "Other" },
+              { "id": "appliance25", "name": "Ceiling Light", "type": "Light" }
+            ]
+          },
+          {
+            "id": "room6",
+            "name": "Dining Room",
+            "appliances": [
+              { "id": "appliance26", "name": "Chandelier", "type": "Light" },
+              { "id": "appliance27", "name": "Air Conditioner", "type": "AC" },
+              { "id": "appliance28", "name": "Table Fan", "type": "Fan" },
+              { "id": "appliance29", "name": "Smart Speaker", "type": "Other" },
+              { "id": "appliance30", "name": "Charging Port", "type": "Sockets" }
+            ]
+          },
+          {
+            "id": "room7",
+            "name": "Guest Bedroom",
+            "appliances": [
+              { "id": "appliance31", "name": "Bedside Lamp", "type": "Light" },
+              { "id": "appliance32", "name": "AC Unit", "type": "AC" },
+              { "id": "appliance33", "name": "Ceiling Fan", "type": "Fan" },
+              { "id": "appliance34", "name": "Smart TV", "type": "TV" },
+              { "id": "appliance35", "name": "Power Outlet", "type": "Sockets" }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "secondFloor",
+        "name": "Second Floor",
+        "rooms": [
+          {
+            "id": "room8",
+            "name": "Master Bedroom",
+            "appliances": [
+              { "id": "appliance36", "name": "Smart TV", "type": "TV" },
+              { "id": "appliance37", "name": "AC Unit", "type": "AC" },
+              { "id": "appliance38", "name": "Ceiling Fan", "type": "Fan" },
+              { "id": "appliance39", "name": "Bedside Lamp", "type": "Light" },
+              { "id": "appliance40", "name": "Charging Station", "type": "Sockets" }
+            ]
+          },
+          {
+            "id": "room9",
+            "name": "Kids Bedroom",
+            "appliances": [
+              { "id": "appliance41", "name": "Night Light", "type": "Light" },
+              { "id": "appliance42", "name": "AC Unit", "type": "AC" },
+              { "id": "appliance43", "name": "Table Fan", "type": "Fan" },
+              { "id": "appliance44", "name": "Smart Speaker", "type": "Other" },
+              { "id": "appliance45", "name": "Power Strip", "type": "Sockets" }
+            ]
+          },
+          {
+            "id": "room10",
+            "name": "Home Office",
+            "appliances": [
+              { "id": "appliance46", "name": "Desk Lamp", "type": "Light" },
+              { "id": "appliance47", "name": "AC Unit", "type": "AC" },
+              { "id": "appliance48", "name": "Ceiling Fan", "type": "Fan" },
+              { "id": "appliance49", "name": "Printer", "type": "Other" },
+              { "id": "appliance50", "name": "Charging Hub", "type": "Sockets" }
+            ]
+          },
+          {
+            "id": "room11",
+            "name": "Bathroom",
+            "appliances": [
+              { "id": "appliance51", "name": "Exhaust Fan", "type": "Fan" },
+              { "id": "appliance52", "name": "Heater", "type": "Other" },
+              { "id": "appliance53", "name": "Vanity Light", "type": "Light" },
+              { "id": "appliance54", "name": "Hair Dryer", "type": "Other" },
+              { "id": "appliance55", "name": "Shaving Outlet", "type": "Sockets" }
+            ]
+          },
+          {
+            "id": "room12",
+            "name": "Balcony",
+            "appliances": [
+              { "id": "appliance56", "name": "Outdoor Light", "type": "Light" },
+              { "id": "appliance57", "name": "Ceiling Fan", "type": "Fan" },
+              { "id": "appliance58", "name": "Outlet", "type": "Sockets" },
+              { "id": "appliance59", "name": "Smart Speaker", "type": "Other" },
+              { "id": "appliance60", "name": "AC Unit", "type": "AC" }
+            ]
+          }
+        ]
+      }
+    ]
+  }
